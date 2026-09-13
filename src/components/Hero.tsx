@@ -21,13 +21,14 @@ interface HeroProps {
 // DODAJEMO { dict } U ZAGRADE FUNKCIJE
 export default function Hero({ dict }: HeroProps) {
   return (
-    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-[#14362b]">
       {/* Pozadinski video */}
       <video
         autoPlay
         loop
         muted
         playsInline
+        poster="/gallery/slikaz.jpg" // Slika koja se prikazuje odmah dok se video učitava
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/videos/hero-bg1.mp4" type="video/mp4" />
