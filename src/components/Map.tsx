@@ -1,59 +1,51 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css"; // Obavezan uvoz CSS-a za Leaflet
-import L from "leaflet";
-
-// Koordinate za Daruvar (možeš ih kasnije fino podesiti na točnu adresu)
-const position: [number, number] = [45.599304, 17.223476];
-
-// Kreiranje modernog custom pina pomoću čistog HTML-a i CSS-a
-const customIcon = L.divIcon({
-  className: "bg-transparent", // Uklanjamo defaultni Leaflet okvir
-  html: `
-    <div style="
-      background-color: #2563eb; 
-      width: 3rem; 
-      height: 3rem; 
-      border-radius: 50% 50% 50% 0; 
-      transform: rotate(-45deg); 
-      border: 3px solid white; 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
-      display: flex; 
-      align-items: center; 
-      justify-content: center;
-    ">
-      <div style="width: 1rem; height: 1rem; background-color: white; border-radius: 50%;"></div>
-    </div>
-  `,
-  iconSize: [48, 48], // Veličina cijelog bloka
-  iconAnchor: [24, 48], // Točka koja točno dodiruje tlo (sredina dolje)
-  popupAnchor: [0, -48], // Gdje iskače prozorčić u odnosu na pin
-});
+import { Navigation } from "lucide-react";
 
 export default function Map() {
+  // Koordinate za Daruvar
+  const lat = 45.599304;
+  const lng = 17.223476;
+
+  // Link za prikaz same karte unutar okvira (Iframe)
+  const embedUrl = `https://maps.google.com/maps?q=${lat},${lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+  
+  // Magični link: Ovo automatski aktivira upute za vožnju do tvojih koordinata
+  const navUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+
   return (
-    // z-0 osigurava da mapa ne prekriva padajuće izbornike ili modale
-    <div className="w-full h-full relative z-0 rounded-3xl overflow-hidden shadow-xl border border-gray-100">
-      <MapContainer 
-        center={position} 
-        zoom={15} 
-        scrollWheelZoom={false} // Isključujemo zoom na scroll da ne smeta pri čitanju stranice
-        className="w-full h-full"
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={position} icon={customIcon}>
-          <Popup className="rounded-xl">
-            <div className="text-center p-1">
-              <h3 className="font-bold text-gray-900">Apartman Lustig</h3>
-              <p className="text-sm text-gray-600">Vaša oaza u Daruvaru</p>
-            </div>
-          </Popup>
-        </Marker>
-      </MapContainer>
+    <div className="w-full h-full min-h-100 relative z-0 rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-gray-50">
+      
+      {/* Google Maps Embed */}
+      <iframe
+        src={embedUrl}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen={false}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-0 w-full h-full z-0"
+      ></iframe>
+
+      {/* Zatamnjeni sloj pri dnu da bi gumb bio čitljiviji */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-black/60 to-transparent z-10 pointer-events-none"></div>
+
+      {/* Lebdeći gumb za navigaciju (Premium TM Studio dizajn) */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 w-[90%] max-w-sm">
+        <a
+          href={navUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-3 bg-[#14362b] text-white px-6 py-4 rounded-2xl shadow-2xl hover:bg-[#0a1f18] hover:-translate-y-1 border border-[#d4af37]/30 transition-all duration-300 group cursor-pointer"
+        >
+          <div className="bg-[#d4af37] p-2 rounded-full text-[#14362b] group-hover:scale-110 transition-transform duration-300">
+            <Navigation size={20} className="fill-current" />
+          </div>
+          <span className="font-bold tracking-wide uppercase text-sm">Pokreni navigaciju</span>
+        </a>
+      </div>
+      
     </div>
   );
 }
