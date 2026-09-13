@@ -77,7 +77,7 @@ export default function AdminPanel() {
       alert("Termin uspješno blokiran i zatvoren na kalendaru!");
       setBlockStart("");
       setBlockEnd("");
-      fetchReservations(); // Osvježi tablicu
+      fetchReservations(); // Osvježi listu
     }
   };
 
@@ -91,7 +91,7 @@ export default function AdminPanel() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#14362b]">
+      <div className="min-h-screen flex items-center justify-center bg-[#14362b] px-4">
         <form onSubmit={handleLogin} className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm">
           <h2 className="text-xl font-bold mb-4 text-[#14362b]">Admin Login</h2>
           <input 
@@ -110,9 +110,9 @@ export default function AdminPanel() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5] p-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold text-[#14362b] mb-8 font-serif">Admin Panel - Apartman Lustig</h1>
+    <div className="min-h-screen bg-[#FBF9F5] p-4 md:p-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-2xl md:text-3xl font-bold text-[#14362b] mb-8 font-serif">Admin Panel - Apartman Lustig</h1>
         
         {/* SEKCIJA ZA RUČNO BLOKIRANJE DATUMA */}
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-amber-100 mb-8">
@@ -144,56 +144,62 @@ export default function AdminPanel() {
           </form>
         </div>
 
-        {/* TABLICA REZERVACIJA I BLOKADA */}
-        <div className="bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden">
-          <div className="p-6 border-b border-gray-100">
-            <h2 className="text-lg font-bold text-[#14362b]">Sve rezervacije i blokade</h2>
-          </div>
-          <table className="w-full text-left">
-            <thead className="bg-gray-50 border-b">
-              <tr>
-                <th className="p-4 text-xs font-bold uppercase text-gray-500">Gost / Naziv</th>
-                <th className="p-4 text-xs font-bold uppercase text-gray-500">Datumi</th>
-                <th className="p-4 text-xs font-bold uppercase text-gray-500">Status</th>
-                <th className="p-4 text-xs font-bold uppercase text-gray-500">Akcije</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reservations.map((res) => (
-                <tr key={res.id} className="border-b hover:bg-gray-50">
-                  <td className="p-4 font-medium text-[#14362b]">{res.guest_name}</td>
-                  <td className="p-4 text-sm text-gray-600">
-                    {format(new Date(res.start_date), "dd.MM.yyyy.", { locale: hr })} - {format(new Date(res.end_date), "dd.MM.yyyy.", { locale: hr })}
-                  </td>
-                  <td className="p-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${res.status === 'confirmed' ? 'bg-emerald-100 text-emerald-800' : res.status === 'cancelled' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-800'}`}>
-                      {res.status}
-                    </span>
-                  </td>
-                  <td className="p-4 space-x-3">
-                    {res.status !== 'confirmed' && (
-                      <button onClick={() => updateStatus(res.id, 'confirmed')} className="text-emerald-700 font-bold hover:underline text-sm cursor-pointer">
-                        Potvrdi
-                      </button>
-                    )}
-                    {res.status !== 'cancelled' && (
-                      <button onClick={() => updateStatus(res.id, 'cancelled')} className="text-red-600 font-bold hover:underline text-sm cursor-pointer">
-                        Odbij
-                      </button>
-                    )}
-                    <button onClick={() => handleDelete(res.id)} className="text-gray-400 hover:text-red-600 text-sm font-medium cursor-pointer">
-                      Obriši
+        {/* LISTA REZERVACIJA I BLOKADA */}
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-amber-100">
+          <h2 className="text-lg font-bold text-[#14362b] mb-6">Sve rezervacije i blokade</h2>
+          
+          {/* Svaka rezervacija je sada u svojoj odvojenoj kartici (boxu) s razmakom space-y-4 */}
+          <div className="space-y-4">
+            {reservations.map((res) => (
+              <div 
+                key={res.id} 
+                className="bg-[#FBF9F5] border border-amber-200/60 rounded-2xl p-5 flex flex-col gap-4 shadow-sm"
+              >
+                {/* Gornji dio kartice: Ime i Status */}
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <span className="font-bold text-[#14362b] text-base">{res.guest_name}</span>
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${res.status === 'confirmed' ? 'bg-emerald-100 text-emerald-800' : res.status === 'cancelled' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-800'}`}>
+                    {res.status}
+                  </span>
+                </div>
+
+                {/* Sredina: Datumi i Poruka */}
+                <div>
+                  <p className="text-sm text-gray-700 font-semibold flex items-center gap-2">
+                   {format(new Date(res.start_date), "dd.MM.yyyy.", { locale: hr })} - {format(new Date(res.end_date), "dd.MM.yyyy.", { locale: hr })}
+                  </p>
+                  {res.message && (
+                    <p className="text-xs text-gray-600 mt-2 italic bg-white p-2.5 rounded-xl border border-amber-100">
+                      "{res.message}"
+                    </p>
+                  )}
+                </div>
+
+                {/* Donji dio: Gumbi za akcije jasno odvojeni */}
+                <div className="flex items-center gap-2 pt-3 border-t border-amber-200/40 flex-wrap">
+                  {res.status !== 'confirmed' && (
+                    <button onClick={() => updateStatus(res.id, 'confirmed')} className="bg-emerald-600 text-white hover:bg-emerald-700 px-4 py-2 rounded-xl font-bold text-xs transition-colors cursor-pointer shadow-sm">
+                      Potvrdi
                     </button>
-                  </td>
-                </tr>
-              ))}
-              {reservations.length === 0 && (
-                <tr>
-                  <td colSpan={4} className="p-8 text-center text-gray-400">Nema evidentiranih rezervacija.</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                  )}
+                  {res.status !== 'cancelled' && (
+                    <button onClick={() => updateStatus(res.id, 'cancelled')} className="bg-red-50 text-red-600 hover:bg-red-100 px-4 py-2 rounded-xl font-bold text-xs transition-colors cursor-pointer">
+                      Odbij
+                    </button>
+                  )}
+                  <button onClick={() => handleDelete(res.id)} className="bg-gray-200 text-gray-700 hover:bg-red-600 hover:text-white px-4 py-2 rounded-xl font-medium text-xs transition-colors cursor-pointer ml-auto">
+                    Obriši
+                  </button>
+                </div>
+
+              </div>
+            ))}
+            
+            {reservations.length === 0 && (
+              <div className="p-8 text-center text-gray-400">Nema evidentiranih rezervacija.</div>
+            )}
+          </div>
+
         </div>
       </div>
     </div>
