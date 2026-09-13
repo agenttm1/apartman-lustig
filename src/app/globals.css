@@ -24,3 +24,59 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ULTIMATIVNI OVERRIDE ZA DAY PICKER (V9) */
+:root {
+  /* Glavne boje */
+  --rdp-accent-color: #14362b !important;
+  --rdp-accent-background-color: #e5ede9 !important;
+  
+  /* Raspon (srednji datumi) */
+  --rdp-range_middle-background-color: #e5ede9 !important;
+  --rdp-range_middle-color: #14362b !important;
+  
+  /* Odabrani (početni i završni datumi) */
+  --rdp-selected-color: #d4af37 !important;
+  --rdp-selected-font-weight: bold !important;
+  --rdp-selected-border: 2px solid #14362b !important;
+}
+
+/* Prisilno gašenje plave bilo gdje unutar kalendara */
+.rdp-root {
+  --rdp-accent-color: #14362b !important;
+}
+
+/* Tvrdi override za odabrane kružiće */
+.rdp-root .rdp-selected,
+.rdp-root .rdp-day_selected {
+  background-color: #14362b !important;
+  color: #d4af37 !important;
+  font-weight: bold !important;
+  border-radius: 9999px !important;
+}
+
+/* Tvrdi override za sredinu raspona */
+.rdp-root .rdp-range_middle {
+  background-color: #e5ede9 !important;
+  color: #14362b !important;
+  border-radius: 0 !important;
+}
+
+/* Onemogućeni datumi (prekriženi) */
+.rdp-root .rdp-disabled {
+  opacity: 0.4 !important;
+  color: #9ca3af !important;
+  text-decoration: line-through !important;
+  background-color: transparent !important;
+}
+
+/* Hover na slobodne datume i strelice */
+.rdp-root .rdp-button:hover:not([disabled]):not(.rdp-selected),
+.rdp-root .rdp-nav_button:hover {
+  background-color: #e5ede9 !important;
+  color: #14362b !important;
+}
+
+.rdp-root .rdp-nav_button svg {
+  fill: #14362b !important;
+}
