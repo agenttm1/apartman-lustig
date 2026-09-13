@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Apartman Lustig",
+    "subtitle": "Ihre Oase der Ruhe und Entspannung im Herzen von Daruvar. Erleben Sie die perfekte Kombination aus modernem Komfort und Natur.",
+    "button": "Unterkunft buchen"
+  },
+  "footer": {
+    "about": "Ihre Oase der Ruhe und Entspannung. Die perfekte Kombination aus modernem Komfort und wunderschöner Natur für einen unvergesslichen Urlaub.",
+    "infoTitle": "Informationen",
+    "address": "Ul. Antuna Matije Reljkovića 65, Daruvar, Kroatien",
+    "contactTitle": "Kontakt",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "bento": {
+    "titleMain": "Alles, was Sie brauchen,",
+    "titleAccent": "und mehr.",
+    "description": "Entworfen für Ihren völligen Komfort, bietet das Apartment Lustig Geräumigkeit und erstklassige Annehmlichkeiten.",
+    "mainCardTitle": "Geräumigkeit und Komfort",
+    "mainCardDesc": "Perfekter Grundriss für Familien oder Gruppen. Viel Platz für erholsamen Schlaf und Entspannung.",
+    "doubleRoom": "Doppelzimmer",
+    "doubleRoomDesc": "Komfort für zwei",
+    "tripleRoom": "Dreibettzimmer",
+    "tripleRoomDesc": "Möglichkeit eines Kinderbetts",
+    "livingRoom": "Wohnzimmer",
+    "livingRoomDesc": "Großer und geräumiger Bereich",
+    "bathroom": "Badezimmer",
+    "bathroomDesc": "Modern und ausgestattet",
+    "multimediaTitle": "Multimedia",
+    "multimediaDesc": "TV im Wohnzimmer und gesicherter Internetzugang.",
+    "parkingTitle": "Privater Parkplatz",
+    "parkingDesc": "Ihr Fahrzeug ist sicher. Gesicherter geräumiger Parkplatz am Objekt.",
+    "accessibilityTitle": "Einfache Erreichbarkeit",
+    "accessibilityDesc": "Im Erdgeschoss gelegen, auch für Personen mit eingeschränkter Mobilität geeignet.",
+    "rulesTitle": "Hausordnung",
+    "rulesDesc": "Rauchen und Haustiere sind nicht erlaubt.",
+    "kitchenTitle": "Ausgestattete Küche",
+    "kitchenDesc": "Alles Notwendige für die schnelle und einfache Zubereitung von Mahlzeiten.",
+    "locationTitle": "Perfekter Ort für Ihren Urlaub",
+    "locationDesc": "Wir befinden uns in einer ruhigen Umgebung schöner Natur. In unmittelbarer Nähe befinden sich der Sportfischteich, der Thermalwasserpark Aquae Balisse, das Heilbad Daruvarske toplice und das Veteranenzentrum."
+  },
+  "gallery": {
+    "title": "Treten Sie ein,",
+    "titleAccent": "erkunden.",
+    "img1": "Außenansicht des Apartments Lustig",
+    "img2": "Schlafzimmer mit Doppelbett",
+    "img3": "Moderne ausgestattete Küche",
+    "img4": "Badezimmer mit Dusche"
+  },
+  "map": {
+    "button": "Navigation starten"
+  }
+}

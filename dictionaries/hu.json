@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Apartman Lustig",
+    "subtitle": "A béke és a pihenés oázisa Daruvar szívében. Tapasztalja meg a modern kényelem és a természet tökéletes harmóniáját.",
+    "button": "Szállás foglalása"
+  },
+  "footer": {
+    "about": "A béke és a pihenés oázisa. A modern kényelem és a gyönyörű természet tökéletes kombinációja egy felejthetetlen nyaraláshoz.",
+    "infoTitle": "Információk",
+    "address": "Ul. Antuna Matije Reljkovića 65, Daruvar, Horvátország",
+    "contactTitle": "Kapcsolat",
+    "rights": "Minden jog fenntartva."
+  },
+  "bento": {
+    "titleMain": "Mindent, amire szüksége van,",
+    "titleAccent": "és még több.",
+    "description": "A teljes kényelemre tervezve az Apartman Lustig tágasságot és prémium felszereltséget kínál.",
+    "mainCardTitle": "Tágasság és Kényelem",
+    "mainCardDesc": "Tökéletes elrendezés családoknak vagy csoportoknak. Elég hely a pihentető alváshoz.",
+    "doubleRoom": "Kétágyas szoba",
+    "doubleRoomDesc": "Kényelem két fő részére",
+    "tripleRoom": "Háromágyas szoba",
+    "tripleRoomDesc": "Gyermekágy elhelyezési lehetőség",
+    "livingRoom": "Nappali",
+    "livingRoomDesc": "Nagy és tágas tér",
+    "bathroom": "Fürdőszoba",
+    "bathroomDesc": "Modern és felszerelt",
+    "multimediaTitle": "Multimédia",
+    "multimediaDesc": "TV a nappaliban és ingyenes internetelérés.",
+    "parkingTitle": "Saját Parkoló",
+    "parkingDesc": "Járműve biztonságban van. Biztosított tágas parkoló az épület mellett.",
+    "accessibilityTitle": "Könnyű megközelíthetőség",
+    "accessibilityDesc": "A földszinten található, mozgáskorlátozott személyek számára is alkalmas.",
+    "rulesTitle": "Házirend",
+    "rulesDesc": "Dohányzás és háziállat tartása nem megengedett.",
+    "kitchenTitle": "Felszerelt konyha",
+    "kitchenDesc": "Minden a gyors és egyszerű ételkészítéshez.",
+    "locationTitle": "Tökéletes helyszín a pihenéshez",
+    "locationDesc": "Nyugodt természeti környezetben találhatók vagyunk. A közelben található a sporthorgásztó, az Aquae Balisse Termál Vízi Park, a Daruvári fürdő és a Veterán Központ."
+  },
+  "gallery": {
+    "title": "Lépjen be,",
+    "titleAccent": "fedezze fel.",
+    "img1": "A Lustig-apartman külső nézete",
+    "img2": "Hálószoba franciaággyal",
+    "img3": "Modernen felszerelt konyha",
+    "img4": "Fürdőszoba zuhanyzóval"
+  },
+  "map": {
+    "button": "Navigáció indítása"
+  }
+}

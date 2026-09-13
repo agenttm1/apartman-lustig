@@ -9,7 +9,17 @@ const handWrittenFont = Dancing_Script({
   weight: ["700"], 
 });
 
-export default function Hero() {
+// OVDJE DEFINIRAMO ŠTO KOMPONENTA OČEKUJE
+interface HeroProps {
+  dict: {
+    title: string;
+    subtitle: string;
+    button: string;
+  };
+}
+
+// DODAJEMO { dict } U ZAGRADE FUNKCIJE
+export default function Hero({ dict }: HeroProps) {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       {/* Pozadinski video */}
@@ -35,7 +45,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className={`${handWrittenFont.className} text-7xl md:text-9xl text-white mb-4 drop-shadow-2xl`}
         >
-          Apartman Lustig
+          {/* DINAMIČNI NASLOV */}
+          {dict.title}
         </motion.h1>
 
         <motion.p 
@@ -44,10 +55,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl drop-shadow-md font-light"
         >
-          Vaša oaza mira i opuštanja u srcu Daruvara. Doživite savršen spoj modernog komfora i prirode.
+          {/* DINAMIČNI PODNASLOV */}
+          {dict.subtitle}
         </motion.p>
 
-        {/* Gumb za rezervaciju */}
         <BookingForm>
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
@@ -57,7 +68,8 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="bg-[#14362b] text-white border-2 border-[#d4af37] px-10 py-4 rounded-full font-bold text-lg shadow-2xl hover:bg-[#1b4839] transition-all tracking-wider cursor-pointer"
           >
-            Rezerviraj Smještaj
+            {/* DINAMIČNI GUMB */}
+            {dict.button}
           </motion.button>
         </BookingForm>
         

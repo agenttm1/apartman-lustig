@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Apartmán Lustig",
+    "subtitle": "Vaše oáza klidu a relaxace v srdci Daruvaru. Zažijte dokonalé spojení moderního pohodlí a přírody.",
+    "button": "Rezervovat ubytování"
+  },
+  "footer": {
+    "about": "Vaše oáza klidu a relaxace. Dokonalé spojení moderního pohodlí a nádherné přírody pro nezapomenutelnou dovolenou.",
+    "infoTitle": "Informace",
+    "address": "Ul. Antuna Matije Reljkovića 65, Daruvar, Chorvatsko",
+    "contactTitle": "Kontakt",
+    "rights": "Všechna práva vyhrazena."
+  },
+  "bento": {
+    "titleMain": "Vše, co potřebujete,",
+    "titleAccent": "a ještě víc.",
+    "description": "Navrženo pro váš úplný komfort, Apartmán Lustig nabízí prostornost a špičkové vybavení.",
+    "mainCardTitle": "Prostornost a Pohodlí",
+    "mainCardDesc": "Ideální uspořádání pro rodiny nebo skupiny. Dostatek místa pro klidný spánek a odpočinek.",
+    "doubleRoom": "Dvoulůžkový pokoj",
+    "doubleRoomDesc": "Pohodlí pro dva",
+    "tripleRoom": "Třílůžkový pokoj",
+    "tripleRoomDesc": "Možnost dětské postýlky",
+    "livingRoom": "Obývací pokoj",
+    "livingRoomDesc": "Velký a prostorný prostor",
+    "bathroom": "Koupelna",
+    "bathroomDesc": "Moderní a vybavená",
+    "multimediaTitle": "Multimédia",
+    "multimediaDesc": "Televize v obývacím pokoji a bezplatný přístup k internetu.",
+    "parkingTitle": "Soukromé Parkoviště",
+    "parkingDesc": "Vaše vozidlo je v bezpečí. Zajištěné prostorné parkoviště přímo u objektu.",
+    "accessibilityTitle": "Snadná dostupnost",
+    "accessibilityDesc": "Umístěno v přízemí domu, vhodné i pro osoby s omezenou schopností pohybu.",
+    "rulesTitle": "Domácí řád",
+    "rulesDesc": "Kouření ani pobyt domácích mazlíčků nejsou povoleny.",
+    "kitchenTitle": "Vybavená kuchyně",
+    "kitchenDesc": "Vše potřebné pro rychlou a snadnou přípravu oblíbených jídel.",
+    "locationTitle": "Ideální místo pro odpočinek",
+    "locationDesc": "Nacházíme se v klidném prostředí krásné přírody. V blízkosti se nachází sportovní rybník, termální vodní park Aquae Balisse, Daruvarské lázně a Veteranské centrum."
+  },
+  "gallery": {
+    "title": "Vstupte,",
+    "titleAccent": "prohlédněte si.",
+    "img1": "Pohled na exteriér apartmánu Lustig",
+    "img2": "Ložnice s manželskou postelí",
+    "img3": "Moderně vybavená kuchyně",
+    "img4": "Koupelna se sprchovým koutem"
+  },
+  "map": {
+    "button": "Spustit navigaci"
+  }
+}

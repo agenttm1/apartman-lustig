@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Apartment Lustig",
+    "subtitle": "Your oasis of peace and relaxation in the heart of Daruvar. Experience the perfect blend of modern comfort and nature.",
+    "button": "Book Accommodation"
+  },
+  "footer": {
+    "about": "Your oasis of peace and relaxation. The perfect blend of modern comfort and beautiful nature for a memorable stay.",
+    "infoTitle": "Information",
+    "address": "Ul. Antuna Matije Reljkovića 65, Daruvar, Croatia",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved."
+  },
+  "bento": {
+    "titleMain": "Everything you need,",
+    "titleAccent": "and more.",
+    "description": "Designed for your complete comfort, Apartment Lustig offers spaciousness and top amenities to make you feel at home.",
+    "mainCardTitle": "Spaciousness and Comfort",
+    "mainCardDesc": "Perfect layout for families or groups. Plenty of space for a peaceful sleep and relaxation.",
+    "doubleRoom": "Double Room",
+    "doubleRoomDesc": "Comfort for two",
+    "tripleRoom": "Triple Room",
+    "tripleRoomDesc": "Option for a baby crib",
+    "livingRoom": "Living Room",
+    "livingRoomDesc": "Large and spacious area",
+    "bathroom": "Bathroom",
+    "bathroomDesc": "Modern and equipped",
+    "multimediaTitle": "Multimedia",
+    "multimediaDesc": "TV in the living room and secure free internet access.",
+    "parkingTitle": "Private Parking",
+    "parkingDesc": "Your vehicle is safe. Secure spacious parking right next to the property.",
+    "accessibilityTitle": "Easy Access",
+    "accessibilityDesc": "Located on the ground floor, also suitable for persons with reduced mobility.",
+    "rulesTitle": "House Rules",
+    "rulesDesc": "Smoking and pets are not allowed.",
+    "kitchenTitle": "Equipped Kitchen",
+    "kitchenDesc": "Everything needed for quick and easy meal preparation.",
+    "locationTitle": "Perfect Location for Vacation",
+    "locationDesc": "We are located in a peaceful environment of beautiful nature. In the immediate vicinity are the sports fishpond (lake), the popular Aquae Balisse Thermal Water Park, healing Daruvar Spa, and the Veterans Center."
+  },
+  "gallery": {
+    "title": "Step inside,",
+    "titleAccent": "explore.",
+    "img1": "Exterior view of Apartment Lustig",
+    "img2": "Bedroom with double bed",
+    "img3": "Modern equipped kitchen",
+    "img4": "Bathroom with shower"
+  },
+  "map": {
+    "button": "Start Navigation"
+  }
+}

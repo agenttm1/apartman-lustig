@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Apartman Lustig",
+    "subtitle": "Vaša oaza mira i opuštanja u srcu Daruvara. Doživite savršen spoj modernog komfora i prirode.",
+    "button": "Rezerviraj Smještaj"
+  },
+  "footer": {
+    "about": "Vaša oaza mira i opuštanja. Savršen spoj modernog komfora i predivne prirode za odmor koji ćete pamtiti.",
+    "infoTitle": "Informacije",
+    "address": "Ul. Antuna Matije Reljkovića 65, Daruvar, Hrvatska",
+    "contactTitle": "Kontakt",
+    "rights": "Sva prava pridržana."
+  },
+  "bento": {
+    "titleMain": "Sve što trebate,",
+    "titleAccent": "i više.",
+    "description": "Dizajniran za vaš potpuni komfor, Apartman Lustig nudi prostranost i vrhunske sadržaje kako biste se osjećali kao kod kuće.",
+    "mainCardTitle": "Prostranost i Udobnost",
+    "mainCardDesc": "Savršen raspored za obitelji ili grupe. Dovoljno prostora za miran san i zajedničko opuštanje.",
+    "doubleRoom": "Dvokrevetna soba",
+    "doubleRoomDesc": "Udobnost za dvoje",
+    "tripleRoom": "Trokrevetna soba",
+    "tripleRoomDesc": "Mogućnost dječjeg krevetića",
+    "livingRoom": "Dnevni boravak",
+    "livingRoomDesc": "Velik i prostran prostor",
+    "bathroom": "Kupaonica",
+    "bathroomDesc": "Moderna i opremljena",
+    "multimediaTitle": "Multimedija",
+    "multimediaDesc": "TV prijemnik u boravku te osiguran besplatan pristup internetu.",
+    "parkingTitle": "Privatni Parking",
+    "parkingDesc": "Vaše vozilo je na sigurnom. Osiguran prostrani parking uz sami objekt.",
+    "accessibilityTitle": "Laka dostupnost",
+    "accessibilityDesc": "Smješten u prizemlju kuće, pogodan i za osobe smanjene pokretljivosti.",
+    "rulesTitle": "Kućni red",
+    "rulesDesc": "Nije dozvoljeno pušenje niti boravak kućnih ljubimaca.",
+    "kitchenTitle": "Opremljena kuhinja",
+    "kitchenDesc": "Sve potrebno za brzu i jednostavnu pripremu omiljenih obroka.",
+    "locationTitle": "Savršena lokacija za odmor",
+    "locationDesc": "Smješteni smo u mirnom okruženju prekrasne prirode. U neposrednoj blizini našeg apartmana nalaze se sportski ribnjak (jezero), popularni Termalni vodeni park Aquae Balisse, ljekovite Daruvarske toplice te Veteranski centar."
+  },
+  "gallery": {
+    "title": "Uđite,",
+    "titleAccent": "razgledajte.",
+    "img1": "Pogled  izvana na Apartman Lustig",
+    "img2": "Spavaća soba s bračnim krevetom",
+    "img3": "Moderno opremljena kuhinja",
+    "img4": "Kupaonica s tuš kabinom"
+  },
+  "map": {
+    "button": "Pokreni navigaciju"
+  }
+}
